@@ -28,7 +28,7 @@ def main():
 
         print(f"Scanning ports {min_port} to {max_port} on {target}...\n")
 
-        max_workers = min(100, max_port - min_port + 1)  # Limit the number of concurrent threads
+        max_workers = min(100, max_port - min_port + 1)  
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             for port in range(min_port, max_port + 1):
                 executor.submit(scan_port, target, port)
