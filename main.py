@@ -16,7 +16,7 @@ def scan_port(target, port):
                     print(f"Port {port} is open")
                     openports.append(port)
             except socket.error:
-                pass  # Port is closed
+                pass  
     except Exception as e:
         print(f"Error scanning port {port}: {e}")
 
